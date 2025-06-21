@@ -1,19 +1,21 @@
-FROM node:22 AS build
+FROM node:22
 
 WORKDIR /app
+
+# 复制package文件
 COPY package*.json ./
-RUN npm ci
+
+# 安装依赖（包括devDependencies用于构建）
+RUN npm install
+
+# 复制源代码
 COPY . .
+
+# 构建应用
 RUN npm run build
 
-FROM node:22 as runtime
-
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci --only=production
-COPY --from=build /app/.next ./.next
-COPY --from=build /app/public ./public
-
+# 暴露端口
 EXPOSE 3000
-USER node
+
+# 设置启动命令
 CMD ["npm", "start"]
