@@ -1,3 +1,4 @@
+
 {
   "AWSEBDockerrunVersion": "1",
   "Image": {
@@ -9,7 +10,5 @@
       "ContainerPort": "3000",
       "HostPort": "80"
     }
-  ],
-  "Logging": "/var/log/eb-docker/containers/eb-current-app"
+  ]
 }
-
