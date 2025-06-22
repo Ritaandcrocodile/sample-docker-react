@@ -1,3 +1,15 @@
+# Jenkins Demo Project
+
+This is a demo project for Jenkins CI/CD pipeline.
+
+## Features
+- Automated builds
+- GitHub webhook integration
+- Docker support
+
+Last updated: 6/22/2025
+
+
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
